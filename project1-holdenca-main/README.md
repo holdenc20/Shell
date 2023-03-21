@@ -1,7 +1,5 @@
 # Project 1: Shell
 
-This is the starter code for [Project 1](https://course.ccs.neu.edu/cs3650sp23/p1.html).
-
 The [Makefile](Makefile) contains the following targets:
 
 - `make all` - compile everything
