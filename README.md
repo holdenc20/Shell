@@ -3,10 +3,11 @@
   <body>
 
 <p>The first project of a Systems class, is to write a <a href="https://en.wikipedia.org/wiki/Unix_shell">Shell</a>.</p>
-<h1 id="part-1">Tokenizer &amp; Basic Shell</h1>
+<h3 id="part-1">Tokenizer &amp; Basic Shell</h3>
 <p>A <em>tokenizer</em> is a piece of code that helps us split up an input line into meaningful <em>tokens</em>.</p>
-<h1 id="p1t1">Shell Tokenizer</h1>
+<h3 id="p1t1">Shell Tokenizer</h3>
 <p>Before we can execute commands (or combination of them) we need to be able to process a command line and split it into chunks (lexical units), called <a href="https://en.wikipedia.org/wiki/Lexical_analysis#Token"><em>tokens</em></a>. The input of a tokenizer is a string and the output is a list of tokens. Our shell will use the tokens described in the table below. The tokens <code>(</code>, <code>)</code>, <code>&lt;</code>, <code>&gt;</code>, <code>;</code>, <code>|</code>, and the whitespace characters (space <code>' '</code>, tab <code>'\t'</code>) are <em>special</em>. Whitespace is not a token, but might separate tokens.</p>
+<br>
 <table class="table table-bordered table-hover">
 <colgroup>
 <col style="width: 21%">
@@ -49,7 +50,7 @@
 </tr>
 </tbody>
 </table>
-
+<br>
 <pre><code>$ echo 'this &lt; is &gt; a demo "This is a sentence" ; "some ( special &gt; chars"' | ./tokenize
 this
 &lt;
@@ -63,7 +64,7 @@ some ( special &gt; chars</code></pre>
 <p>In this example, we print the example string to standard output, but immediately <a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)"><em>pipe</em></a> that output into the input of the <code>tokenize</code> program.</p>
 <p>Whitespace that is not in quotes should not be included in any token.</p>
 <p>What we are implementing here is a <a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton">Deterministic Finite-state Automaton (DFA)</a>, which is a recognizer for <a href="https://en.wikipedia.org/wiki/Regular_language">Reguar languages</a>.</p>
-<h1 id="p1t2">Basic Shell</h1>
+<h3 id="p1t2">Basic Shell</h3>
 <p>The next step is to implement basic shell functionality running a single user-specified command at a time. The shell should display a prompt, read the command and its arguments, and execute the command. This should be performed in a loop, until the user requests to exit the shell. The commands can have 0 or more arguments and these arguments may be enclosed in double quotes <code>"</code>, in which case the enclosed string is treated as a single argument.</p>
 <p>Example interaction:</p>
 <pre><code>$ ./shell
@@ -98,7 +99,7 @@ shell $</code></pre></li>
 <li><p>System commands should not need a full path specification to run in the shell.</p>
 <p>For example, issuing <code>ls</code> should work the same way it works in BASH and run the <code>ls</code> executable that might be stored in <code>/bin</code>, <code>/usr/bin</code>, or elsewhere in the <em>system path</em>.</p></li>
 </ol>
-<h1 id="part-2">Advanced Shell Features</h1>
+<h3 id="part-2">Advanced Shell Features</h3>
 <ul>
 <li><strong>Sequencing</strong>, e.g., <code>echo one; echo two</code></li>
 <li><strong>Input redirection</strong>, e.g., <code>sort &lt; foo.txt</code></li>
@@ -127,7 +128,7 @@ shell $</code></pre></li>
 <dd>Explains all the built-in commands available in your shell
 </dd>
 </dl>
-<h1 id="p2t2">Sequencing Using <code>;</code></h1>
+<h3 id="p2t2">Sequencing Using <code>;</code></h3>
 <p>The behavior of <code>;</code> is to execute the command on the left-hand side of the operator, and once it completes, execute the command on the right-hand side.</p>
 <p>For example:</p>
 <pre><code>```
@@ -150,7 +151,7 @@ shell $
 
 
 
-<h1 id="the-grammar-of-shell">The Grammar of Shell</h1>
+<h3 id="the-grammar-of-shell">The Grammar of Shell</h3>
 <p>A grammar for a language specifies all the <em>valid</em> examples of expressions (or sentences) in that language. Our shell has the following grammar. This should help decide what is a valid command line, but also to help you structure your code.</p>
 <section id="shell-grammar" class="box">
 <h5>Shell Grammar</h5>
@@ -162,7 +163,7 @@ shell $
 </ul>
 </section>
 
-<h1 id="examples">Examples</h1>
+<h3 id="examples">Examples</h3>
 <p>Here are some examples you can use to test the shell functionality.</p>
 <ul>
 <li><p>The line</p>
@@ -197,7 +198,7 @@ two</code></pre></li>
 10</code></pre></li>
 </ul>
 
-<h1 id="using-the-provided-makefile">Using the Provided Makefile</h1>
+<h3 id="using-the-provided-makefile">Using the Provided Makefile</h3>
 <p>As before, we provide you with a Makefile for convenience. It contains the following targets:</p>
 <ul>
 <li><code>make all</code> – compile everything</li>
