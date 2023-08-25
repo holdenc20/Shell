@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/dashboard.css" rel="stylesheet">
+
+<style type="text/css">code{white-space: pre;}</style>
+</head>
+  
   <body>
 
 <p>The first project of a Systems class, is to write a <a href="https://en.wikipedia.org/wiki/Unix_shell">Shell</a>.</p>
