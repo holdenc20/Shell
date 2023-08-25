@@ -9,7 +9,6 @@
 <!-- Custom styles for this template -->
 <link href="css/dashboard.css" rel="stylesheet">
 
-<style type="text/css">code{white-space: pre;}</style>
 </head>
   
   <body>
