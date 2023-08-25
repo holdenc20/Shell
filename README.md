@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+  <meta charset="UTF-8">
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
